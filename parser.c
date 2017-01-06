@@ -46,8 +46,8 @@ You may vary this program provided it reads 10 formulas in a file called "input.
 
 char *slicer(char *g, int start){
     char *part = malloc(Fsize);
-    int j = 0;
-    for(int i = start; i < strlen(g); i++){
+    int i = 0;
+    for(i = start; i < strlen(g); i++){
         part[j++] = g[i];
     }
     return part;
@@ -96,7 +96,8 @@ int parse(char *g){
 
 int multilple_formulas(char *g){
     int counter = 0;
-    for (int i = 0; i < strlen(g); i++){
+    int i;
+    for (i = 0; i < strlen(g); i++){
         if (g[i] == '(') counter++;
             else if(g[i] == ')') counter--;
 
@@ -108,7 +109,8 @@ int multilple_formulas(char *g){
 char *parttwo(char *g){
         char *part = malloc(Fsize);
         int j = 0;
-        for(int i = multilple_formulas(g) + 1; i < strlen(g) - 1; i++){
+        int i = 0;
+        for(i = multilple_formulas(g) + 1; i < strlen(g) - 1; i++){
             part[j++] = g[i];
         }
         return part;
@@ -117,7 +119,8 @@ char *parttwo(char *g){
 char *partone(char *g){
         char *part = malloc(Fsize);
         int j = 0;
-        for(int i = 1; i < multilple_formulas(g); i++){
+        int i;
+        for(i = 1; i < multilple_formulas(g); i++){
             part[j++] = g[i];
         }
         return part;
@@ -204,6 +207,7 @@ char* add_negation(char *string){
     return negated_formula;
 }
 
+
 int prop_position(char *prop){
     switch(prop[0]){
         case('p'): return 0; break;
@@ -229,7 +233,8 @@ int check_for_closed(int *array){
 int *create_array_copy(int *array){
     int *array_copy = malloc(6*sizeof(int));
 
-    for(int i = 0; i < 6; i++){
+    int i;
+    for(i = 0; i < 6; i++){
         array_copy[i] = array[i];
     }
 
@@ -245,8 +250,6 @@ void complete_recursive(struct tableau *t, int *array, int *result){
     if (strlen(t->root) == 2){
         array[prop_position(slicer(t->root, 1))*2 + 1] = 1;
     }
-    for (int i = 0; i < 6; i++) printf("%i ", array[i]);
-    printf("\n");
 
     // if we reached the end of a branch
     if (!(t->left) && !(t->right)){
@@ -330,7 +333,8 @@ int closed(struct tableau *t){
 
     int *prop_presence = malloc(6*sizeof(int));
 
-    for(int i = 0; i < 6; i++){
+    int i;
+    for(i = 0; i < 6; i++){
         prop_presence[i] = 0;
     }
 
@@ -365,7 +369,7 @@ int main(){ /*input a string and check if its a propositional formula */
 
       /*make new tableau with name at root, no children, no parent*/
 
-      struct tableau t={name, NULL, NULL, NULL};
+      struct tableau t={name, NULL, NULL, gitNULL};
 
       /*expand the root, recursively complete the children*/
       if (parse(name)!=0){

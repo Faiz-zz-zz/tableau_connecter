@@ -1,10 +1,10 @@
--(p>p) is a negation.  -(p>p) is not satisfiable.
--(p>(q>p)) is a negation.  -(p>(q>p)) is not satisfiable.
--((p>q)>p) is a negation.  -((p>q)>p) is satisfiable.
---((pvq)>(-p^-q)) is a negation.  --((pvq)>(-p^-q)) is satisfiable.
-(p^-p) is a binary.  (p^-p) is not satisfiable.
-((p>q)^(q>p)) is a binary.  ((p>q)^(q>p)) is satisfiable.
--((p>(qvr))>((p>q)v(p>r))) is a negation.  -((p>(qvr))>((p>q)v(p>r))) is not satisfiable.
-((p>(qvr))>((p>q)v(p>r))) is a binary.  ((p>(qvr))>((p>q)v(p>r))) is satisfiable.
-((p>q)^(-q>-p)) is a binary.  ((p>q)^(-q>-p)) is satisfiable.
-((pvq)^p>-q) is not a formula.  I told you, ((pvq)^p>-q) is not a formula.
+-((q>(p>-r))>((q>p)>(q>-r))) is a negation.  -((q>(p>-r))>((q>p)>(q>-r))) is not satisfiable.
+((p>((p>-r)>(r^-q)))>((p>(p>-r))>(p>(r^-q)))) is a binary.  ((p>((p>-r)>(r^-q)))>((p>(p>-r))>(p>(r^-q)))) is satisfiable.
+-((-(p^-q)>--(rv-q))>(-(rv-q)>(p^-q))) is a negation.  -((-(p^-q)>--(rv-q))>(-(rv-q)>(p^-q))) is not satisfiable.
+((p^-p)>((-qv-q)>(p^-p))) is a binary.  ((p^-p)>((-qv-q)>(p^-p))) is satisfiable.
+-((--p>--(q^-q))>(-(q^-q)>-p)) is a negation.  -((--p>--(q^-q))>(-(q^-q)>-p)) is not satisfiable.
+((--(q^-q)>-(p>-q))>((p>-q)>-(q^-q))) is a binary.  ((--(q^-q)>-(p>-q))>((p>-q)>-(q^-q))) is satisfiable.
+-((-(-p>-p)>--(r^-q))>(-(r^-q)>(-p>-p))) is a negation.  -((-(-p>-p)>--(r^-q))>(-(r^-q)>(-p>-p))) is not satisfiable.
+((-(p^-q)>-q)>(q>(p^-q))) is a binary.  ((-(p^-q)>-q)>(q>(p^-q))) is satisfiable.
+-((r^-q)>(-p>(r^-q))) is a negation.  -((r^-q)>(-p>(r^-q))) is not satisfiable.
+(-(rv-q)>((-qv-q)>-(rv-q))) is a binary.  (-(rv-q)>((-qv-q)>-(rv-q))) is satisfiable.
