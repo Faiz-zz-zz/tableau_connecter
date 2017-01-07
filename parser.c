@@ -369,7 +369,7 @@ int main(){ /*input a string and check if its a propositional formula */
 
       /*make new tableau with name at root, no children, no parent*/
 
-      struct tableau t={name, NULL, NULL, gitNULL};
+      struct tableau t={name, NULL, NULL, NULL};
 
       /*expand the root, recursively complete the children*/
       if (parse(name)!=0){
